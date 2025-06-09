@@ -718,3 +718,68 @@ hr{
     margin-top: -50px;
   }
 }
+
+@media (max-width: 600px) {
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .icons {
+    width: 5rem;
+    height: 5rem;
+  }
+  .tag {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+  }
+  .custom-container {
+    padding-left: 1rem;
+  }
+  .services-list {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .services-list div {
+    padding: 20px;
+  }
+  .container-card {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .project-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+  .project-title {
+    font-size: 1.1rem;
+  }
+  .project-features li {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar.active {
+    display: flex;
+  }
+  .header {
+    padding: 15px 5%;
+    justify-content: space-between;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
