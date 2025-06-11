@@ -132,6 +132,9 @@ body {
   box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
     0 0 200px cyan;
 }
+.resumebtn-box{
+  display: none;
+}
 #element {
   color: #0ef;
 }
@@ -404,17 +407,16 @@ section {
 .project-link {
   margin-top: 1.5rem;
   text-align: center;
+  text-decoration: none;
 }
 
 .project-link a {
   color: #0077cc;
   text-decoration: none;
   font-weight: 500;
+
 }
 
-.project-link a:hover {
-  text-decoration: underline;
-}
 
 
 /* section */
@@ -422,10 +424,7 @@ section {
 .contact {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center;
-  justify-content: center; */
   gap: 3rem;
-  /* padding-left: 30px; */
   margin-top: 80px;
 }
 .contact-text h3 {
@@ -564,32 +563,12 @@ hr{
 
 @media (max-width: 600px) {
   .header {
-    /* display: none; */
-    height: 10px;
-  }
-  .navbar {
     display: none;
-  }
-  .logo {
-    padding-left: 80px;
-  }
-  .ankitimg {
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -40px;
-    margin-bottom: -200px;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
   }
   .home {
     background: none;
-  }
-  .home-content h1 {
-    font-size: 30px;
-    line-height: 1.4;
-    text-align: center;
+    align-items: flex-start;
+
   }
   .home-content h3 {
     font-size: 20px;
@@ -601,127 +580,77 @@ hr{
     text-align: center;
   }
   .home-content p {
-    font-size: 10px;
-    line-height: 1.2;
-    text-align: center;
-  }
-  .home-sci {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 12px;
+    line-height: 1.4;
   }
   .btn-box {
     display: none;
   }
-  /* about */
-  .about-img {
-    display: none;
-  }
+.resumebtn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+.resumebtn-box:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
+    0 0 200px cyan;
+}
+
+
+  /********************* about ***********************************/
   .about {
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: -250px;
+    margin-top: -40%;
   }
   .about-text h2 {
     font-size: 30px;
+    margin-top: -10%;
+  }
+  .about-text h4 {
+    font-size: 20px;
   }
   .about-text p {
     font-size: 4vw;
     padding-left: 20px;
     line-height: 1.4;
-    text-align: center;
+    text-align: start;
   }
-  /* services */
-  .sub-title {
+  /*********************** cerfictions **************************/
+  .sub-title  {
     font-size: 30px;
-    text-align: justify;
     margin-top: -100px;
   }
   .services-list {
-    align-items: center;
-    justify-content: center;
-    margin-left: -40px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
     margin-top: -5px;
   }
-  .services-list p{
-    font-size: 10px;
+  .services-list  p{
+    font-size: 14px;
     display: flex;
     text-align: justify;
     line-height: 1.4;
   }
-  .services-list div {
-    padding: 35px;
-  }
   /* skills */
-  .container1 {
-    padding: 0;
-    margin: 0;
-  }
+
   .sub-title1 {
-    font-size: 30px;
+    font-size: 40px;
     margin-top: -100px;
   }
-  .heading1 {
-    font-size: 20px;
-    margin-top: -40px;
-  }
-  .Technical-bars {
-    margin-top: -20px;
-    width: 80vw;
-    margin-left: 35px;
-    line-height: 1.5;
-  }
-  .radial-bars {
-    width: 100%;
-    padding-left: 20px;
-    margin-left: -25px;
-  }
-  /* project */
-  .main-text h2 {
-    font-size: 30px;
-    margin-top: -10px;
-  }
-  .portfolio-content {
-    margin-top: -50px;
-  }
-  /* /form */
-  .top {
-    display: none;
-  }
-  .contact-form {
-    display: none;
-  }
-  .contact {
-    display: none;
-  }
-  .contact h3 {
-    font-size: 30px;
-  }
-  .contact h4 {
-    margin-top: 40px;
-    text-align: center;
-  }
-  .contact p {
-    line-height: 1.4;
-    margin-top: px;
-    font-size: 15px;
-    color: #ededed;
-    padding-right: 20px;
-    text-align: center;
-  }
-  .contact {
-    display: block;
-    margin-top: 50px;
-  }
-  .last-text {
-    margin-top: -50px;
-  }
-}
-
-@media (max-width: 600px) {
   .skill-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     gap: 10px;
   }
   .icons {
@@ -735,20 +664,14 @@ hr{
   .custom-container {
     padding-left: 1rem;
   }
-  .services-list {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-  }
-  .services-list div {
-    padding: 20px;
-  }
-  .container-card {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 10px;
+/**********************project***************** */
+.main-text h2 {
+    font-size: 40px;
+    margin-top: 30%;
   }
   .project-card {
-    max-width: 100%;
+    margin-top:-10%;
+    max-width: 90%;
     padding: 15px;
   }
   .project-title {
@@ -757,29 +680,34 @@ hr{
   .project-features li {
     font-size: 0.85rem;
   }
-}
-@media (max-width: 768px) {
-  .navbar {
-    display: none;
-    flex-direction: column;
-    background: #000;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-  }
-  .navbar.active {
-    display: flex;
-  }
-  .header {
-    padding: 15px 5%;
-    justify-content: space-between;
-  }
-  .menu-toggle {
-    display: block;
+/******************** contact me **************/
+
+  .contact h3 {
     font-size: 30px;
-    color: #fff;
-    cursor: pointer;
+  }
+  .contact h4 {
+  
+    text-align: start;
+    padding-left: 10px;
+  }
+  .contact p {
+    line-height: 1.4;
+    font-size: 15px;
+    color: #ededed;
+    padding-left: 15px;
+    padding-right: 8px;
+    text-align: start;
+  }
+  .contact-icons{
+    padding-left: 20px;
+  }
+  .last-text{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  /* last arrow button */
+  .top{
+    padding-right: 20px;
   }
 }
